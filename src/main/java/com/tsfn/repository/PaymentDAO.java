@@ -25,16 +25,4 @@ public class PaymentDAO {
 		return Optional.ofNullable(entityManager.find(Payment.class, id));
 	}
 
-//	public void updateDepartment(Department department) {
-//		entityManager.merge(department);
-//	}
-//
-//	public void deleteDepartment(int id) {
-//		getDepartmentById(id).ifPresent(department -> entityManager.remove(department));
-//	}
-//
-//	public List<Department> getAllDepartments() {
-//		return entityManager.createQuery("SELECT d FROM Department d", Department.class).getResultList();
-//
-//	}
 }

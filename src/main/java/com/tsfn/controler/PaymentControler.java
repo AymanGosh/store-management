@@ -13,23 +13,10 @@ import com.tsfn.beans.Payment;
 import com.tsfn.services.PaymentService;
 
 @RestController
-//@RequestMapping(value="/80")
+
 public class PaymentControler {
 	@Autowired
 	PaymentService paymentService;
-
-//	// @RequestMapping(value="/departments/getall" , method = RequestMethod.GET)
-//	@GetMapping(value = "/departments/getall")
-//	public List<Department> getAllDepartments() {
-//		return orderService.getAllDepartments();
-//	}
-
-//	// http://www.localhost:8080/departmetns/department/1 pathVariable
-//	// http://www.localhost:8080/departmetns/department?id=1&name="R&D" queryParam
-//	@GetMapping(value = "/departments/department")
-//	public Optional<Department> getDepartmentByIdByQueryPatram(@RequestParam("id") int id) {
-//		return orderService.getDepartment(id);
-//	}
 
 	@GetMapping(value = "/payments/payment/{id}")
 	public Optional<Payment> getOrderByIdByPathVar(@PathVariable int id) {

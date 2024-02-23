@@ -17,18 +17,6 @@ public class PaymentService {
 	public void createPayment(Payment payment) {
 		paymentDao.savePayment(payment);
 	}
-//
-//	public List<Department> getAllDepartments() {
-//		return paymentDao.getAllDepartments();
-//	}
-//
-//	public void updateDepartment(Department Department) {
-//		paymentDao.updateDepartment(Department);
-//	}
-//
-//	public void deleteDepartment(int id) {
-//		paymentDao.deleteDepartment(id);
-//	}
 
 	public Optional<Payment> getPayment(int id) {
 		return paymentDao.getPaymentById(id);

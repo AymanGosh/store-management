@@ -18,18 +18,6 @@ public class OrderService {
 		orderDao.saveOrder(order);
 	}
 
-//	public List<Department> getAllDepartments() {
-//		return OrderDAO.getAllDepartments();
-//	}
-//
-//	public void updateDepartment(Department Department) {
-//		OrderDAO.updateDepartment(Department);
-//	}
-//
-//	public void deleteDepartment(int id) {
-//		OrderDAO.deleteDepartment(id);
-//	}
-
 	public Optional<Order> getOrder(int id) {
 		return orderDao.getOrderById(id);
 	}
