@@ -22,8 +22,8 @@ public class Payment {
 	@Column(name = "payment_id")
 	private int payment_id;
 
-	@Column(name = "payment_total_amount")
-	private double totalAmount;
+	@Column(name = "payment_amount")
+	private double amount;
 
 	@JsonManagedReference
 	@OneToMany(mappedBy = "payment", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
@@ -38,11 +38,11 @@ public class Payment {
 	}
 
 	public double getTotalAmount() {
-		return totalAmount;
+		return amount;
 	}
 
-	public void setTotalAmount(double totalAmount) {
-		this.totalAmount = totalAmount;
+	public void setTotalAmount(double amount) {
+		this.amount = amount;
 	}
 
 	public List<Order> getOrders() {

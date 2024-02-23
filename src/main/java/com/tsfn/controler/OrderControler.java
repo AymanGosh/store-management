@@ -1,5 +1,6 @@
 package com.tsfn.controler;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,11 @@ public class OrderControler {
 	@PostMapping(value = "/orders/add", consumes = "application/json")
 	public void createDepartment(@RequestBody Order order) {
 		orderService.createOrder(order);
+	}
+
+	@GetMapping(value = "/orders/getall")
+	public List<Order> getAllEmployees() {
+		return orderService.getAllOrders();
 	}
 
 }

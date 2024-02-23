@@ -35,7 +35,7 @@ public class Order {
 
 	@JsonBackReference
 	@ManyToOne
-	@JoinColumn(name = "payment_id", nullable = false)
+	@JoinColumn(name = "payment_id", nullable = true)
 	private Payment payment;
 
 	public int getId() {

@@ -1,7 +1,5 @@
 package com.tsfn.repository;
 
-import java.util.Optional;
-
 import org.springframework.stereotype.Repository;
 
 import com.tsfn.beans.Payment;
@@ -19,10 +17,6 @@ public class PaymentDAO {
 
 	public void savePayment(Payment payment) {
 		entityManager.persist(payment);
-	}
-
-	public Optional<Payment> getPaymentById(int id) {
-		return Optional.ofNullable(entityManager.find(Payment.class, id));
 	}
 
 }
