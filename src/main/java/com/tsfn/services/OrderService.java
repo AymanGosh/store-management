@@ -26,4 +26,9 @@ public class OrderService {
 	public List<Order> getAllOrders() {
 		return orderRepository.findAll();
 	}
+
+	public List<Order> getAllOrdersByPriceLessThan(double price) {
+		// TODO Auto-generated method stub
+		return orderRepository.findAllByPriceLessThan(price);
+	}
 }

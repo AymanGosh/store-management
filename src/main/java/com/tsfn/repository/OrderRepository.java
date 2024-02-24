@@ -11,4 +11,6 @@ import com.tsfn.beans.Order;
 public interface OrderRepository extends JpaRepository<Order, Integer> {
 	// Custom query method to find all orders
 	List<Order> findAll();
+
+	List<Order> findAllByPriceLessThan(double maxPrice);
 }
