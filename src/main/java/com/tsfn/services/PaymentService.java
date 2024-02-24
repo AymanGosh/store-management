@@ -49,4 +49,9 @@ public class PaymentService {
 		paymentRepository.save(payment);
 
 	}
+
+	public void deletePayment(int id) {
+		paymentRepository.deleteById(id);
+
+	}
 }
