@@ -31,7 +31,7 @@ public class OrderControler {
 	}
 
 	@GetMapping(value = "/orders/getall")
-	public List<Order> getAllEmployees() {
+	public List<Order> getAllOrders() {
 		return orderService.getAllOrders();
 	}
 

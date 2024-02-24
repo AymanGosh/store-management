@@ -41,4 +41,15 @@ public class PaymentControler {
 	public void createDepartment(@RequestBody Payment payment) {
 		paymentService.createPayment(payment);
 	}
+
+	// a
+	@PostMapping(value = "/payments/pay", consumes = "application/json")
+	public void pay(@RequestBody Order order) {
+		paymentService.pay(order);
+	}
+
+	@GetMapping(value = "/payments/getall")
+	public List<Payment> getAllPayments() {
+		return paymentService.getAllPayments();
+	}
 }

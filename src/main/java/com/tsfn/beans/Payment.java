@@ -1,5 +1,6 @@
 package com.tsfn.beans;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -27,7 +28,7 @@ public class Payment {
 
 	@JsonManagedReference
 	@OneToMany(mappedBy = "payment", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	private List<Order> orders;
+	private List<Order> orders = new ArrayList<>();
 
 	public int getPayment_id() {
 		return payment_id;
@@ -51,6 +52,11 @@ public class Payment {
 
 	public void setOrders(List<Order> orders) {
 		this.orders = orders;
+	}
+
+	public void addNewOrder(Order order) {
+		orders.add(order);
+
 	}
 
 }
