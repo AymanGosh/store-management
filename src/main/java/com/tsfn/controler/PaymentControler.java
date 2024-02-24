@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.tsfn.beans.Order;
 import com.tsfn.beans.Payment;
 import com.tsfn.services.PaymentService;
 
@@ -23,6 +24,12 @@ public class PaymentControler {
 	@GetMapping(value = "/payments/{method}")
 	public List<Payment> getAllPaymentsByPaymentMethod(@PathVariable String method) {
 		return paymentService.getAllPaymentsByPaymentMethod(method);
+	}
+
+	// e
+	@GetMapping(value = "/payments/payment/by-order", consumes = "application/json")
+	public List<Payment> getPaymentByOrder(@RequestBody Order order) {
+		return paymentService.getPaymentByOrder(order);
 	}
 
 	@GetMapping(value = "/payments/payment/{id}")

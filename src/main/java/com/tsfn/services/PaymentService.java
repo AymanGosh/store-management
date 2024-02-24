@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.tsfn.beans.Order;
 import com.tsfn.beans.Payment;
 import com.tsfn.repository.PaymentRepository;
 
@@ -25,5 +26,9 @@ public class PaymentService {
 
 	public List<Payment> getAllPaymentsByPaymentMethod(String method) {
 		return paymentRepository.findAllByOrders_Method(method);
+	}
+
+	public List<Payment> getPaymentByOrder(Order order) {
+		return paymentRepository.findByOrders(order);
 	}
 }

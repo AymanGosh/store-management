@@ -36,7 +36,6 @@ public class OrderControler {
 	}
 
 	// f
-	// f. public Optional<Order> getAllOrdersByPriceLessThan (double price);
 	@GetMapping(value = "/orders/by-price")
 	public List<Order> getAllOrdersByPriceLessThan(@RequestParam("price") double price) {
 		return orderService.getAllOrdersByPriceLessThan(price);
