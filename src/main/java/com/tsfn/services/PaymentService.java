@@ -40,6 +40,7 @@ public class PaymentService {
 	public void pay(Order order) {
 		// Create a new Payment
 		Payment payment = new Payment();
+		// Builder.Payment
 		payment.setTotalAmount(order.getPrice()); // Set the payment amount
 
 		// Associate the Order with the Payment
